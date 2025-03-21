@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Casos - Plataforma Odontolegal</title>
+  <link href="../assets/css/tailwind.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <header class="bg-blue-500 text-white p-4">
+    <h1 class="text-xl font-bold">Casos Periciais</h1>
+  </header>
+  <main class="p-6">
+    <button id="newCaseBtn" class="bg-green-500 text-white p-2 rounded mb-4 hover:bg-green-600">Novo Caso</button>
+    <div id="caseForm" class="hidden bg-white p-4 rounded shadow mb-4">
+      <form id="createCaseForm" class="space-y-4">
+        <input id="title" placeholder="Título" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <textarea id="description" placeholder="Descrição" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        <select id="type" class="w-full p-2 border rounded">
+          <option value="Acidente">Acidente</option>
+          <option value="Identificação">Identificação</option>
+          <option value="Exame Criminal">Exame Criminal</option>
+        </select>
+        <select id="status" class="w-full p-2 border rounded">
+          <option value="Em andamento">Em andamento</option>
+          <option value="Finalizado">Finalizado</option>
+          <option value="Arquivado">Arquivado</option>
+        </select>
+        <button type="submit" class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Salvar</button>
+      </form>
+    </div>
+    <ul id="caseList" class="space-y-2"></ul>
+  </main>
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/cases.js"></script>
+</body>
+</html>

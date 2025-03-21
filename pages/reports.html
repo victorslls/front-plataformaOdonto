@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laudos - Plataforma Odontolegal</title>
+  <link href="../assets/css/tailwind.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+  <header class="bg-blue-500 text-white p-4">
+    <h1 class="text-xl font-bold">Geração de Laudos</h1>
+  </header>
+  <main class="p-6">
+    <button id="newReportBtn" class="bg-green-500 text-white p-2 rounded mb-4 hover:bg-green-600">Novo Laudo</button>
+    <div id="reportForm" class="hidden bg-white p-4 rounded shadow mb-4">
+      <form id="createReportForm" class="space-y-4">
+        <input id="caseId" placeholder="ID do Caso" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500">
+        <textarea id="description" placeholder="Descrição do Laudo" class="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500"></textarea>
+        <button type="submit" class="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">Gerar Laudo</button>
+      </form>
+    </div>
+  </main>
+  <script src="../assets/js/api.js"></script>
+  <script src="../assets/js/reports.js"></script>
+</body>
+</html>
